@@ -1,0 +1,13 @@
+{
+  "nt_nameserver_id": "#NT_NAMESERVER_ID#",
+  "nt_group_id": "#NT_GROUP_ID#",
+  "datadir": "#DATADIR#",
+  "description": "#DESCRIPTION#",
+  "export_format": "#EXPORT_FORMAT#",
+  "service_type": "#SERVICE_TYPE#",
+  "logdir": "#LOGDIR#",
+  "name": "#NAME#",
+  "address": "#ADDRESS#",
+  "ttl": "#TTL#",
+  "nt_user_session": "#NT_USER_SESSION#"
+}
