@@ -6,7 +6,7 @@ VERSION="0.1.2"
 ###############################################################################
 # Configuration
 
-SCRIPT_CMD="./rest-json.sh"
+SCRIPT_CMD="./rest-json-client.sh"
 AUTH_REQUEST="authenticate"
 AUTH_VARS="USERNAME PASSWORD"
 
