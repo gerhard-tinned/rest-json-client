@@ -1,0 +1,11 @@
+{
+  "nt_zone_record_id": "#NT_ZONE_RECORD_ID#",
+  "nt_zone_id": "#NT_ZONE_ID#",
+  "name": "#NAME#",
+  "ttl": "#TTL#",
+  "description": "#DESCRIPTION#",
+  "type": "#TYPE#",
+  "address": "#ADDRESS#",
+  "weight": "#WEIGHT#",
+  "nt_user_session": "#NT_USER_SESSION#"
+}

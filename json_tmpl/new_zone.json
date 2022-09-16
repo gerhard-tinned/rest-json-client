@@ -1,0 +1,15 @@
+{
+  "nt_zone_id": "#NT_ZONE_ID#",
+  "nt_group_id": "#NT_GROUP_ID#",
+  "zone": "#ZONE#",
+  "ttl": "#TTL#",
+  "serial": "#SERIAL#",
+  "nameservers": "#NAMESERVERS#",
+  "mailaddr": "#MAILADDR#",
+  "description": "#DESCRIPTION#",
+  "refresh": "#REFRESH#",
+  "retry": "#RETRY#",
+  "expire": "#EXPIRE#",
+  "minimum": "#MINIMUM#",
+  "nt_user_session": "#NT_USER_SESSION#"
+}
