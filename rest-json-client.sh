@@ -1,6 +1,6 @@
 #!/bin/bash
 # 
-VERSION="0.2.1"
+VERSION="0.2.3"
 #
 
 #
@@ -76,7 +76,7 @@ while [ $# -gt 0 ]; do
             if [[ ! -z "$2" ]] && [[ -d "$2" ]]; then
                 TEMPLATE_PATH=$2
             else
-                echo "ERROR: Specified template directory does not exist or is not a directory."
+                echo "ERROR: Specified template directory '${TEMPLATE_PATH}' does not exist or is not a directory."
                 help_screen
                 exit 1
             fi
@@ -87,7 +87,7 @@ while [ $# -gt 0 ]; do
             if [[ ! -z "$2" ]] && [[ -f "${TEMPLATE_PATH}/$2.json" ]]; then
                 REQUEST_NAME=$2
             else
-                echo "ERROR: Specified template directory does not exist or is not a directory."
+                echo "ERROR: Specified template '${TEMPLATE_PATH}/$2.json' or directory does not exist or is not a directory."
                 help_screen
                 exit 1
             fi
