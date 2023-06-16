@@ -1,6 +1,6 @@
 #!/bin/bash
 # 
-VERSION="0.2.3"
+VERSION="0.2.4"
 #
 
 #
@@ -123,7 +123,7 @@ done
 # List available requests
 #
 if [[ "${COMMAND}" == "LIST" ]] && [[ -z "${REQUEST_NAME}" ]]; then
-    find ${TEMPLATE_PATH} -name *.json | sed -Ee 's|^.*/([a-z_]+)\.json|\1|'
+    find ${TEMPLATE_PATH} -name '*.json' | sed -Ee 's|^.*/([a-z_]+)\.json|\1|'
     exit 0
 fi
 
