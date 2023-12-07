@@ -1,6 +1,5 @@
 {
   "nt_user_session": "#NT_USER_SESSION#",
-  "include_subgroups": "#INCLUDE_SUBGROUPS#",
   "page": "#PAGE#",
   "start": "#START#",
   "limit": "#LIMIT#",
@@ -21,7 +20,20 @@
   "3_option": "#3_OPTION#",
   "3_value": "#3_VALUE#",
   "3_inclusive": "#3_INCLUSIVE#",
+  "4_field": "#4_FIELD#",
+  "4_option": "#4_OPTION#",
+  "4_value": "#4_VALUE#",
+  "4_inclusive": "#4_INCLUSIVE#",
+  "5_field": "#5_FIELD#",
+  "5_option": "#5_OPTION#",
+  "5_value": "#5_VALUE#",
+  "5_inclusive": "#5_INCLUSIVE#",
   "quick_search": "#QUICK_SEARCH#",
   "search_value": "#SEARCH_VALUE#",
-  "nt_group_id": "#NT_GROUP_ID#"
+  "nt_zone_id": "#NT_ZONE_ID#"
 }
+
+
+
+
+

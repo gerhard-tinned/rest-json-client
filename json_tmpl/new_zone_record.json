@@ -6,6 +6,8 @@
   "description": "#DESCRIPTION#",
   "type": "#TYPE#",
   "address": "#ADDRESS#",
+  "priority": "#PRIORITY#",
   "weight": "#WEIGHT#",
+  "other": "#OTHER#",
   "nt_user_session": "#NT_USER_SESSION#"
 }

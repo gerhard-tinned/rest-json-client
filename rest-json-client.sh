@@ -1,6 +1,6 @@
 #!/bin/bash
 # 
-VERSION="0.3.0"
+VERSION="0.3.2"
 #
 
 #
@@ -219,15 +219,19 @@ if [[ -z "${OK_CHECK}" ]] || [[ "${OK_CHECK}" == "null" ]]; then
     for EF in ${ERROR_FIELDS}; do
         EF_VALUE=$(echo ${RESPONSE_RAW} | jq "${EF}")
         echoout "$(echo ${EF} | awk -F "." '{print $NF}' | tr '[:lower:]' '[:upper:]') ${EF_VALUE}"
+        RC=1
     done
 else
     debugout "*** SUCCESS ***"
     for RF in ${RESULT_FIELDS}; do
         RF_VALUE=$(echo ${RESPONSE_RAW} | jq "${RF}" )
-        echoout "$(echo ${RF} | awk -F "." '{print $NF}' | tr '[:lower:]' '[:upper:]') ${RF_VALUE}"
+        echoout "$(echo ${RF} | awk -F "." '{print $NF}' | tr '[:lower:]' '[:upper:]' | sed -E 's/^([0-9A-Z_]+).*$/\1/') ${RF_VALUE}"
+        RC=0
     done
 fi
 echoout "\n"
 
 
 rm ${TMP_FILE}
+
+exit ${RC}
