@@ -1,0 +1,19 @@
+{
+  "nt_user_session": "#NT_USER_SESSION#",
+  "include_subgroups": "#INCLUDE_SUBGROUPS#",
+  "page": "#PAGE#",
+  "start": "#START#",
+  "limit": "#LIMIT#",
+  "Sort": "#SORT#",
+  "1_sortfield": "#1_SORTFIELD#",
+  "1_sortmod": "#1_SORTMOD#",
+  "search_query": "#SEARCH_QUERY#",
+  "Search": "#SEARCH#",
+  "1_field": "#1_FIELD#",
+  "1_option": "#1_OPTION#",
+  "1_value": "#1_VALUE#",
+  "1_inclusive": "#1_INCLUSIVE#",
+  "quick_search": "#QUICK_SEARCH#",
+  "search_value": "#SEARCH_VALUE#",
+  "nt_group_id": "#NT_GROUP_ID#"
+}

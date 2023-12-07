@@ -1,6 +1,6 @@
 #!/bin/bash
 # 
-VERSION="0.2.4"
+VERSION="0.3.0"
 #
 
 #
@@ -101,7 +101,7 @@ while [ $# -gt 0 ]; do
 
         # VARIABLES        
         *)
-            if [[ "${1}" == "$(echo ${1} | egrep '^[A-Z_]+$')" ]] && [[ ! -z "$2" ]]; then
+            if [[ "${1}" == "$(echo ${1} | egrep '^[0-9A-Z_]+$')" ]] && [[ ! -z "$2" ]]; then
                 export JSONSV_${1}="${2}"
                 shift 2
             else
@@ -133,7 +133,7 @@ fi
 #
 if [[ "${COMMAND}" == "LIST" ]]; then
     if [[ -f "${TEMPLATE_PATH}/${REQUEST_NAME}.json" ]]; then
-        FIELDS=$(egrep '#[A-Z_]+#' ${TEMPLATE_PATH}/${REQUEST_NAME}.json | sed -Ee 's/^.*#([A-Z_]+)#.*$/\1/')
+        FIELDS=$(egrep '#[0-9A-Z_]+#' ${TEMPLATE_PATH}/${REQUEST_NAME}.json | sed -Ee 's/^.*#([0-9A-Z_]+)#.*$/\1/')
         . ${TEMPLATE_PATH}/${REQUEST_NAME}.cfg
 
         echoout ""
@@ -158,7 +158,7 @@ fi
 
 # Reading files
 if [[ -f "${TEMPLATE_PATH}/${REQUEST_NAME}.json" ]]; then
-    FIELDS=$(egrep '#[A-Z_]+#' ${TEMPLATE_PATH}/${REQUEST_NAME}.json | sed -Ee 's/^.*#([A-Z_]+)#.*$/\1/')
+    FIELDS=$(egrep '#[0-9A-Z_]+#' ${TEMPLATE_PATH}/${REQUEST_NAME}.json | sed -Ee 's/^.*#([0-9A-Z_]+)#.*$/\1/')
     . ${TEMPLATE_PATH}/${REQUEST_NAME}.cfg
     TMP_FILE=$(umask 077 && mktemp /tmp/rest-json.XXXXXXXXXX)
 else 
@@ -176,7 +176,7 @@ for F in ${FIELDS}; do
 done
 
 # Replacing the variables with content ; Removing elements with NO variables value
-echo sed ${FIELD_REPLACE} ${TEMPLATE_PATH}/${REQUEST_NAME}.json | bash | egrep -v "#[A-Z_]+#" >${TMP_FILE}
+echo sed ${FIELD_REPLACE} ${TEMPLATE_PATH}/${REQUEST_NAME}.json | bash | egrep -v "#[0-9A-Z_]+#" >${TMP_FILE}
 
 
 if [[ "${DEBUG}" == "1" ]]; then
